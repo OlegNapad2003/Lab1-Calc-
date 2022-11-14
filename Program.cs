@@ -10,19 +10,19 @@ namespace RPN
     {
         static void Main(string[] args)
         {
-            string arg;
+            string argumet;
             Stack<double> st = new Stack<double>();
 
-            while ((arg = Console.ReadLine()) != "exit")
+            while ((argument = Console.ReadLine()) != "exit")
             {
-                double num;
-                bool isNum = double.TryParse(arg, out num);
-                if (isNum)
-                    st.Push(num);
+                double number;
+                bool isNumber = double.TryParse(argument, out number);
+                if (isNumber)
+                    st.Push(number);
                 else
                 {
                     double op2;
-                    switch (arg)
+                    switch (argument)
                     {
                         case "+":
                             st.Push(st.Pop() + st.Pop());
